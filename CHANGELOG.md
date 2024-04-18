@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 3.4.1
+
+- **Gradle:** Gradle 7.x support
+
 ## 3.4.0
 
 ### Features
