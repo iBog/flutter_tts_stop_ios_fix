@@ -11,6 +11,7 @@ import android.speech.tts.Voice;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -49,13 +50,6 @@ public class FlutterTtsPlugin implements MethodCallHandler, FlutterPlugin {
   private static final String SILENCE_PREFIX = "SIL_";
   private static final String SYNTHESIZE_TO_FILE_PREFIX = "STF_";
   private int queueMode = TextToSpeech.QUEUE_FLUSH;
-
-  /** Plugin registration. */
-  @SuppressWarnings("deprecation")
-  public static void registerWith(io.flutter.plugin.common.PluginRegistry.Registrar registrar) {
-    FlutterTtsPlugin instance = new FlutterTtsPlugin();
-    instance.initInstance(registrar.messenger(), registrar.activeContext());
-  }
 
   private void initInstance(BinaryMessenger messenger, Context context) {
     this.context = context;

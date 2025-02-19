@@ -13,7 +13,8 @@ if (localPropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 31
+    namespace = "com.tundralabs.example"
+    compileSdkVersion 34
 
     lintOptions {
         disable 'InvalidPackage'
